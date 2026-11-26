@@ -29,11 +29,14 @@ async function bootstrap() {
     }),
   );
 
-  const port = process.env.PORT || 3000;
+  const port = Number(process.env.PORT) || 3000;
 
   await app.listen(port, '0.0.0.0');
 
-  console.log(`Application running on port ${port}`);
+  console.log(`SERVER LISTENING ON 0.0.0.0:${port}`);
 }
 
-bootstrap();
+bootstrap().catch((error) => {
+  console.error('Application startup failed:', error);
+  process.exit(1);
+});
