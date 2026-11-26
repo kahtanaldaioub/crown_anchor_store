@@ -10,7 +10,7 @@ async function bootstrap() {
   app.use(requestIdMiddleware);
   app.setGlobalPrefix('api');
   app.use(helmet());
-  app.enableCors({ origin: 'http://localhost:5173' });
+  app.enableCors({ origin: 'https://crown-anchor-store.vercel.app/' });
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
