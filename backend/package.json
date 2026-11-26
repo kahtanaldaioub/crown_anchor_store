@@ -1,3 +1,4 @@
+
 {
   "name": "store",
   "version": "0.0.1",
@@ -6,6 +7,9 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "build": "nest build",
     "deploy": "nest deploy",
@@ -13,7 +17,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
+    "start:prod": "node dist/main.js",
     "migration:backfill-default-branch": "node dist/migrations/backfill-default-branch.js",
     "lint": "oxlint --type-aware src/ test/",
     "test": "vitest run",
